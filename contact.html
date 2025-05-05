@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBSaloon | Contact</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        /* CSS for messages */
+        #message {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none; /* Hidden by default */
+            font-size: 20px;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Barber Shop Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="index.html#booking">Booking</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cancel_booking.html">Cancel Booking</a></li>
+            </ul>            
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Contact Elite Barber Shop</h1>
+            <p>We're here to help - Reach out anytime!</p>
+            <a href="#contactForm" class="btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="slideshow-background"></div>
+    <div class="contact">
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Our Location</h2>
+                    <div class="info-item" style="min-height: 40px;">
+                        <i class="fas fa-map-marker-alt" style="font-size: 18px;"></i>
+                        <p>Av. Paulo VI 18c, 2040-325 Rio Maior</p>
+                    </div>
+                </div>
+                    <div class="info-item1">
+                        <i class="fas fa-phone" style="font-size: 18px;"></i>
+                        <p>(+351) 920404631</p>
+                    </div>
+                    <div class="info-item2">
+                        <i class="fas fa-envelope" style="font-size: 18px;"></i>
+                        <p>bbsaloonrm@gmail.com</p>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207.95009449671568!2d-8.935352430268264!3d39.341165184832796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd18b9b6fcb433f1%3A0x4a0dc9ce378df187!2sBriju!5e0!3m2!1spt-PT!2spt!4v1742053509690!5m2!1spt-PT!2spt";
+                                width="100%" height="300" style="border:0;" 
+                                allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <div class="contact-form">
+                        <h2>Send Us a Message</h2>
+                        <form id="contactForm">
+                            <div class="form-group" style="font-size: 20px;">
+                                <input type="text" id="name" name="name" placeholder=" " required>
+                                <label for="name">Full Name</label>
+                            </div>
+                            <div class="form-group" style="font-size: 20px;">
+                                <input type="email" id="email" name="email" placeholder=" " required>
+                                <label for="email">Email Address</label>
+                            </div>
+                            <div class="form-group" style="font-size: 20px;">
+                                <textarea id="userMessage" name="message" placeholder=" " required></textarea>
+                                <label for="userMessage">Your Message</label>
+                            </div>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                        <div class="rotating-logo">
+                            <img src="logorotation.png" alt="Barber Shop Logo">
+                        </div>
+                        <!-- Message container -->
+                        <div id="message"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+    </section>
+
+    
+       
+    
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Elite Barber Shop. All Rights Reserved.</p>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/?locale=pt_PT">Facebook</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://x.com/?lang=pt">Twitter</a></li>
+            </ul>
+        </div>
+    
+        <div class="quick-links">
+            <h4>Quick Links</h4>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="index.html#booking">Booking</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cancel_booking.html">Cancel Booking</a></li>
+            </ul>
+        </div>
+    
+        <div class="contact-info2">
+            <h4>Contact Us</h4>
+            <p>Email: bbsaloonrm@gmail.com</p>
+            <p>Phone: (+351) 920404631</p>
+            <p>Address: Av. Paulo VI 18c, 2040-325 Rio Maior</p>
+        </div>
+    
+        <div class="footer-content2">
+            <table class="timetable">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Opening Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>Closed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the form from submitting normally
+
+            // Get form data
+            const formData = new FormData(this);
+
+            // Step 1: Insert data into the database
+            fetch('contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json()) // Parse JSON response
+            .then(data => {
+                const messageDiv = document.getElementById('message');
+                if (data.status === 'success') {
+                    // Step 2: Send confirmation email
+                    fetch('contactEmail.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json()) // Parse JSON response
+                    .then(emailData => {
+                        if (emailData.status === 'success') {
+                            messageDiv.className = 'success';
+                            messageDiv.innerHTML = 'Message sent! A confirmation email has been sent.';
+                        } else {
+                            messageDiv.className = 'error';
+                            messageDiv.innerHTML = 'Message sent, but there was an error sending the confirmation email.';
+                        }
+                        // Reset the form after successful submission
+                        form.reset();
+                    })
+                    .catch(error => {
+                        console.error('Email Error:', error);
+                        messageDiv.className = 'error';
+                        messageDiv.innerHTML = 'An error occurred while sending the confirmation email.';
+                    });
+                } else {
+                    // Display error message from contact.php
+                    messageDiv.className = 'error';
+                    messageDiv.innerHTML = data.message;
+                }
+                // Show the message
+                messageDiv.style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                const messageDiv = document.getElementById('message');
+                messageDiv.className = 'error';
+                messageDiv.innerHTML = 'An error occurred while processing your request.';
+                messageDiv.style.display = 'block';
+            });
+        });
+    } else {
+        console.error('Form not found!');
+    }
+});
+    </script>
+</body>
+</html>

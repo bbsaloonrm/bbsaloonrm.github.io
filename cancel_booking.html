@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBSaloon | Cancel Booking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style4.css">
+    <style>
+        /* CSS for messages */
+        #message {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none; /* Hidden by default */
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Barber Shop Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="index.html#booking">Booking</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cancel_booking.html">Cancel Booking</a></li>
+            </ul>         
+        </nav>
+    </header>
+
+    <!-- Slideshow Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Cancel Your Booking</h1>
+            <p>If you need to cancel your booking, please provide the details below.</p>
+            <a href="#cancel" class="btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Cancel Booking Form Section -->
+    <section id="cancel" class="info-section">
+        <div class="booking-form-container">
+            <div class="booking-form">
+                <h2>Cancel Your Appointment</h2>
+                <form id="cancelForm">
+                    <input type="hidden" name="access_key" value="60fce58a-c4f2-4131-b6f2-5d64629200c3">
+                    <input type="hidden" name="subject" value="Cancel Booking">
+                    <input type="hidden" name="from_name" value="Cancellation">
+
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Appointment Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <button type="submit" id="submit" class="btn">Cancel Booking</button>
+                </form>
+                <!-- Message container -->
+                <div id="message"></div>
+            </div>
+        </div>
+    </section>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 Elite Barber Shop. All Rights Reserved.</p>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/?locale=pt_PT">Facebook</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://x.com/?lang=pt">Twitter</a></li>
+                </ul>
+                
+            </div>
+            <div class="quick-links">
+                <h4>Quick Links</h4>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="index.html#booking">Booking</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="cancel_booking.html">Cancel Booking</a></li>
+                </ul>
+              </div>
+    
+              <div class="contact-info">
+                <h4>Contact Us</h4>
+                <p>Email: bbsaloonrm@gmail.com</p>
+                <p>Phone: (+351) 920404631</p>
+                <p>Address: Av. Paulo VI 18c, 2040-325 Rio Maior</p>
+              </div>
+            <div class="footer-content2">
+                <table class="timetable">
+                  <thead>
+                    <tr>
+                      <th>Day</th>
+                      <th>Opening Hours</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Monday</td>
+                      <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td>Tuesday</td>
+                      <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td>Wednesday</td>
+                      <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td>Thursday</td>
+                      <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td>Friday</td>
+                      <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td>Saturday</td>
+                      <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td>Sunday</td>
+                      <td>Closed</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+    
+              
+              
+        </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('cancelForm');
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the form from submitting normally
+
+            // Get form data
+            const formData = new FormData(this);
+
+            // Step 1: Cancel the booking
+            fetch('cancel_booking.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json()) // Parse JSON response
+            .then(data => {
+                const messageDiv = document.getElementById('message');
+                if (data.status === 'success') {
+                    // Step 2: Send cancellation email
+                    fetch('cancelemail.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json()) // Parse JSON response
+                    .then(emailData => {
+                        if (emailData.status === 'success') {
+                            messageDiv.className = 'success';
+                            messageDiv.innerHTML = 'Booking canceled! A confirmation email has been sent.';
+                        } else {
+                            messageDiv.className = 'error';
+                            messageDiv.innerHTML = 'Booking canceled, but there was an error sending the confirmation email.';
+                        }
+                        // Reset the form after successful cancellation
+                        form.reset();
+                    })
+                    .catch(error => {
+                        console.error('Email Error:', error);
+                        messageDiv.className = 'error';
+                        messageDiv.innerHTML = 'An error occurred while sending the confirmation email.';
+                    });
+                } else {
+                    // Display error message from cancel_booking.php
+                    messageDiv.className = 'error';
+                    messageDiv.innerHTML = data.message;
+                }
+                // Show the message
+                messageDiv.style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                const messageDiv = document.getElementById('message');
+                messageDiv.className = 'error';
+                messageDiv.innerHTML = 'An error occurred while processing your request.';
+                messageDiv.style.display = 'block';
+            });
+        });
+    } else {
+        console.error('Form not found!');
+    }
+});
+    </script>
+</body>
+</html>

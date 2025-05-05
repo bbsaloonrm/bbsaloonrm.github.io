@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBSaloon | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* CSS for messages */
+        #message {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none; /* Hidden by default */
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Barber Shop Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="index.html#booking">Booking</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cancel_booking.html">Cancel Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+        <h1>Welcome to BBSaloon</h1>
+        <p>Book your appointment today for the best grooming experience!</p>
+        <a href="#booking" class="btn">Book Now</a>
+    </section>
+</div>
+
+    <section id="booking" class="info-section">
+        <div class="booking-form-container">
+            <div class="booking-form">
+                <h2>Book Your Appointment</h2>
+                <form id="bookingForm">
+                    <input type="hidden" name="access_key" value="60fce58a-c4f2-4131-b6f2-5d64629200c3">
+                    <input type="hidden" name="subject" value="New Booking">
+                    <input type="hidden" name="from_name" value="Booking">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Time</label>
+                        <select name="time" id="time" name="time" required>
+                            <option value="08:00 - 08:30">08:00 - 08:30</option>
+                            <option value="08:30 - 09:00">08:30 - 09:00</option>
+                            <option value="09:00 - 09:30">09:00 - 09:30</option>
+                            <option value="09:30 - 10:00">09:30 - 10:00</option>
+                            <option value="10:00 - 10:30">10:00 - 10:30</option>
+                            <option value="10:30 - 11:00">10:30 - 11:00</option>
+                            <option value="11:00 - 11:30">11:00 - 11:30</option>
+                            <option value="11:30 - 12:00">11:30 - 12:00</option>
+                            <option value="12:00 - 12:30">12:00 - 12:30</option>
+                            <option value="12:30 - 13:00">12:30 - 13:00</option>
+                            <option value="13:00 - 13:30">13:00 - 13:30</option>
+                            <option value="13:30 - 14:00">13:30 - 14:00</option>
+                            <option value="14:00 - 14:30">14:00 - 14:30</option>
+                            <option value="14:30 - 15:00">14:30 - 15:00</option>
+                            <option value="15:00 - 15:30">15:00 - 15:30</option>
+                            <option value="15:30 - 16:00">15:30 - 16:00</option>
+                            <option value="16:00 - 16:30">16:00 - 16:30</option>
+                            <option value="16:30 - 17:00">16:30 - 17:00</option>
+                            <option value="17:00 - 17:30">17:00 - 17:30</option>
+                            <option value="17:30 - 18:00">17:30 - 18:00</option>
+                            <option value="18:00 - 18:30">18:00 - 18:30</option>
+                            <option value="18:30 - 19:00">18:30 - 19:00</option>
+                            <option value="19:00 - 19:30">19:00 - 19:30</option>
+                            <option value="19:30 - 20:00">19:30 - 20:00</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Choose a Service</label>
+                        <select id="service" name="service" required>
+                            <option value="Haircut">Haircut</option>
+                            <option value="BeardTrim">Beard Trim</option>
+                            <option value="Shave">Shave</option>
+                            <option value="Hair coloring">Hair coloring</option>
+                            <option value="Facial treatment">Facial treatment</option>
+                            <option value="Scalp treatment">Scalp treatment</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="submit" class="btn">Book Now</button>
+                </form>
+            </div>
+
+
+                <!-- Slideshow Container -->
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="image1.avif" alt="Slide 1">
+                    </div>
+                    <div class="slide fade">
+                        <img src="image2.jpg" alt="Slide 2">
+                    </div>
+                    <div class="slide fade">
+                        <img src="image3.jpeg" alt="Slide 3">
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+            let slideIndex = 0;
+            showSlides();
+            function showSlides() {
+                let slides = document.querySelectorAll(".slide");
+                slides.forEach(slide => slide.style.display = "none");
+                slideIndex++;
+                if (slideIndex > slides.length) slideIndex = 1;
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 3000);
+            }
+            </script>
+
+<div id="container" class="container">
+    <div class="box">
+        <i class="fas fa-store"></i>
+        <h3>About the Saloon</h3>
+        <p>A premium saloon offering top-notch haircuts and grooming services.</p>
+    </div>
+    <div class="box">
+        <i class="fas fa-user-tie"></i>
+        <h3>Skilled Barbers</h3>
+        <p>Our team consists of highly trained professionals with years of experience.</p>
+    </div>
+    <div class="box">
+        <i class="fas fa-cut"></i>
+        <h3>Quality Services</h3>
+        <p>We provide haircuts, beard trims, shaves, and more with great attention to detail.</p>
+    </div>
+    <div class="box">
+        <i class="fas fa-star"></i>
+        <h3>Customer Satisfaction</h3>
+        <p>Our clients love the experience and keep coming back for more.</p>
+    </div>
+</div>
+
+    <iframe width="600" height="350" 
+    src="video.mp4" 
+    frameborder="0" allowfullscreen>
+    </iframe>
+
+    <div class="video-text">
+        <h2>Tutorial Video</h2>
+        <i class="far fa-check-circle"></i>
+        <p>How to book an appointment with us.</p>
+        <i class="far fa-check-circle"></i>
+        <p>How to cancel an appointment with us.</p>
+        <i class="far fa-check-circle"></i>
+        <p>How to reschedule an appointment with us.</p>
+        <i class="far fa-check-circle"></i>
+        <p>Don't forget to give feedback.</p>
+    </div>
+
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Elite Barber Shop. All Rights Reserved.</p>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/?locale=pt_PT">Facebook</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://x.com/?lang=pt">Twitter</a></li>
+            </ul>
+            
+        </div>
+        <div class="quick-links">
+            <h4>Quick Links</h4>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="index.html#booking">Booking</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cancel_booking.html">Cancel Booking</a></li>
+            </ul>
+          </div>
+
+          <div class="contact-info">
+            <h4>Contact Us</h4>
+            <p>Email: bbsaloonrm@gmail.com</p>
+            <p>Phone: (+351) 920404631</p>
+            <p>Address: Av. Paulo VI 18c, 2040-325 Rio Maior</p>
+          </div>
+        <div class="footer-content2">
+            <table class="timetable">
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Opening Hours</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Monday</td>
+                  <td>8:00 AM - 8:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Tuesday</td>
+                  <td>8:00 AM - 8:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Wednesday</td>
+                  <td>8:00 AM - 8:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Thursday</td>
+                  <td>8:00 AM - 8:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Friday</td>
+                  <td>8:00 AM - 8:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Saturday</td>
+                  <td>8:00 AM - 8:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Sunday</td>
+                  <td>Closed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          
+          
+    </footer>
+    <script>
+        // Wait for the DOM to load
+        document.addEventListener('DOMContentLoaded', function () {
+            // Attach event listener to the form
+            const form = document.getElementById('bookingForm');
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault(); // Prevent the form from submitting normally
+
+                    // Get form data
+                    const formData = new FormData(this);
+
+                    // Send AJAX request to insert booking
+                    fetch('process_booking.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json()) // Parse JSON response
+                    .then(data => {
+                        if (data.status === 'success') {
+                            // Send confirmation email
+                            fetch('test.php', {
+                                method: 'POST',
+                                body: formData
+                            })
+                            .then(response => response.json()) // Parse JSON response
+                            .then(emailData => {
+                                const messageDiv = document.createElement('div');
+                                messageDiv.id = 'message';
+                                if (emailData.status === 'success') {
+                                    messageDiv.className = 'success';
+                                    messageDiv.innerHTML = 'Booking confirmed! A confirmation email has been sent.';
+
+                                    // Reset the form after successful submission
+                                    form.reset();
+                                } else {
+                                    messageDiv.className = 'error';
+                                    messageDiv.innerHTML = emailData.message;
+                                }
+                                // Append the message below the form
+                                form.appendChild(messageDiv);
+                                messageDiv.style.display = 'block'; // Show the message
+                            })
+                            .catch(error => {
+                                console.error('Email Error:', error);
+                            });
+                        } else {
+                            // Display database error message
+                            const messageDiv = document.createElement('div');
+                            messageDiv.id = 'message';
+                            messageDiv.className = 'error';
+                            messageDiv.innerHTML = data.message;
+                            form.appendChild(messageDiv);
+                            messageDiv.style.display = 'block'; // Show the message
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Database Error:', error);
+                    });
+                });
+            } else {
+                console.error('Form not found!');
+            }
+        });
+    </script>
+</body>
+</html>
