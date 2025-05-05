@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBSaloon | Our Services</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Barber Shop Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="index.html#booking">Booking</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cancel_booking.html">Cancel Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Our Services</h1>
+            <p>Professional grooming services tailored to your style.</p>
+            <a href="#service-list" class="btn">Check out!</a>
+        </div>
+    </section>
+    
+
+    <div class="slideshow-background"></div>
+
+
+    <div id="service-list" class="service-list">
+        <div class="service-item">
+            <img src="shave.jpg" alt="Haircut">
+            <div class="service-content">
+                <h3>Haircut</h3>
+                <p>Professional haircuts tailored to your style.</p>
+                <a href="home.html#booking" class="book-now">Book Now</a>
+            </div>
+        </div>
+    
+        <div class="service-item">
+            <img src="trimming.jpg" alt="Beard Trim">
+            <div class="service-content">
+                <h3>Beard Trim</h3>
+                <p>Get a sharp and well-groomed beard.</p>
+                <a href="home.html#booking" class="book-now">Book Now</a>
+            </div>
+        </div>
+    
+        <div class="service-item">
+            <img src="beard.jpg" alt="Shave">
+            <div class="service-content">
+                <h3>Shave</h3>
+                <p>Experience a clean and smooth shave.</p>
+                <a href="home.html#booking" class="book-now">Book Now</a>
+            </div>
+        </div>
+    
+        <div class="service-item">
+            <img src="haircolor.jpg" alt="Hair Coloring">
+            <div class="service-content">
+                <h3>Hair Coloring</h3>
+                <p>Transform your look with professional hair coloring.</p>
+                <a href="home.html#booking" class="book-now">Book Now</a>
+            </div>
+        </div>
+    
+        <div class="service-item">
+            <img src="facial.jpg" alt="Facial Treatment">
+            <div class="service-content">
+                <h3>Facial Treatment</h3>
+                <p>Refresh your skin with a relaxing facial treatment.</p>
+                <a href="home.html#booking" class="book-now">Book Now</a>
+            </div>
+        </div>
+    
+        <div class="service-item">
+            <img src="scalp.jpg" alt="Scalp Treatment">
+            <div class="service-content">
+                <h3>Scalp Treatment</h3>
+                <p>Rejuvenate your scalp for healthy hair growth.</p>
+                <a href="home.html#booking" class="book-now">Book Now</a>
+            </div>
+        </div>
+    </div>
+    
+    
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 Elite Barber Shop. All Rights Reserved.</p>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/?locale=pt_PT">Facebook</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://x.com/?lang=pt">Twitter</a></li>
+                </ul>
+                
+            </div>
+            <div class="quick-links">
+                <h4>Quick Links</h4>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="index.html#booking">Booking</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="cancel_booking.html">Cancel Booking</a></li>
+                </ul>
+              </div>
+    
+              <div class="contact-info">
+                <h4>Contact Us</h4>
+                <p>Email: bbsaloonrm@gmail.com</p>
+                <p>Phone: (+351) 920404631</p>
+                <p>Address: Av. Paulo VI 18c, 2040-325 Rio Maior</p>
+              </div>
+            <div class="footer-content2">
+                <table class="timetable">
+                  <thead>
+                    <tr>
+                      <th>Day</th>
+                      <th>Opening Hours</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Monday</td>
+                      <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td>Tuesday</td>
+                      <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td>Wednesday</td>
+                      <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td>Thursday</td>
+                      <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td>Friday</td>
+                      <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td>Saturday</td>
+                      <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td>Sunday</td>
+                      <td>Closed</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+    
+              
+              
+        </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const serviceItems = document.querySelectorAll(".service-item");
+    
+        function revealServices() {
+            let screenPosition = window.innerHeight / 1.3;
+    
+            serviceItems.forEach((item, index) => {
+                let itemPosition = item.getBoundingClientRect().top;
+    
+                if (itemPosition < screenPosition) {
+                    setTimeout(() => {
+                        item.classList.add("visible");
+                    }, index * 200); // Delay each item slightly
+                }
+            });
+        }
+    
+        window.addEventListener("scroll", revealServices);
+        revealServices(); // Trigger on page load
+    });
+    
+    </script>
+    
+
+</body>
+</html>
+
+
